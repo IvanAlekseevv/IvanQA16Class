@@ -14,7 +14,7 @@ public class TestBase {
     @BeforeClass
     public void setUp() {
         wd = new ChromeDriver();
-        wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         openSite();
 
         login("admin", "secret");
@@ -107,6 +107,18 @@ public class TestBase {
         wd.findElement(By.name("address")).click();
         wd.findElement(By.name("address")).clear();
         wd.findElement(By.name("address")).sendKeys(contactData.getAddress());
+
+        wd.findElement(By.name("nickname")).click();
+        wd.findElement(By.name("nickname")).clear();
+        wd.findElement(By.name("nickname")).sendKeys(contactData.getNickname());
+
+        wd.findElement(By.name("company")).click();
+        wd.findElement(By.name("company")).clear();
+        wd.findElement(By.name("company")).sendKeys(contactData.getCompany());
+
+
+
+
     }
 
     public void initContactCreation() {

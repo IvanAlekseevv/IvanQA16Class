@@ -8,7 +8,7 @@ public class ContactCreationTests extends TestBase {
                 public void testContactCreation(){
 
             initContactCreation();
-            fillContactForm(new ContactData("Oleg", "Olegovich", "Jabotinsky,16"));
+            fillContactForm(new ContactData("Oleg", "Olegovich", "Oleg55", "Jabotinsky,16", "IBM"));
             CreateContact();
 
 
