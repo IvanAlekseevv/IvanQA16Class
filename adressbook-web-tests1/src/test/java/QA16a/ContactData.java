@@ -1,24 +1,40 @@
 package QA16a;
 
 public class ContactData {
-    private final String firstname;
-    private final String lastname;
-    private final String nickname;
-    private final String address;
-    private final String company;
+    private  String firstname;
+    private  String lastname;
+    private  String nickname;
+    private  String address;
+    private  String company;
 
 
 
-    public ContactData(String firstname, String lastname, String nickname, String address, String company ) {
+
+
+    public ContactData setFirstname(String firstname) {
         this.firstname = firstname;
-        this.lastname = lastname;
-        this.nickname = nickname;
-        this.address = address;
-        this.company = company;
-
-
+        return this;
     }
 
+    public ContactData setLastname(String lastname) {
+        this.lastname = lastname;
+        return this;
+    }
+
+    public ContactData setNickname(String nickname) {
+        this.nickname = nickname;
+        return this;
+    }
+
+    public ContactData setAddress(String address) {
+        this.address = address;
+        return this;
+    }
+
+    public ContactData setCompany(String company) {
+        this.company = company;
+        return this;
+    }
     public String getFirstname() {
         return firstname;
     }

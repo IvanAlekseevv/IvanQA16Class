@@ -8,7 +8,14 @@ public class ContactCreationTests extends TestBase {
                 public void testContactCreation(){
 
             initContactCreation();
-            fillContactForm(new ContactData("Oleg", "Olegovich", "Oleg55", "Jabotinsky,16", "IBM"));
+            fillContactForm(new ContactData()
+                    .setFirstname("Oleg")
+                    .setLastname("Olegovich")
+                    .setNickname("Oleg55")
+                    .setAddress("Jabotinsky,16")
+                    .setCompany("IBM"));
+
+
             CreateContact();
 
 

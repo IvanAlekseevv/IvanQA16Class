@@ -14,7 +14,7 @@ public class TestBase {
     @BeforeClass
     public void setUp() {
         wd = new ChromeDriver();
-        wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         openSite();
 
         login("admin", "secret");
