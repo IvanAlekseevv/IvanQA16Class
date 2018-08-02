@@ -7,8 +7,8 @@ public class ContactCreationTests extends TestBase {
         @Test
                 public void testContactCreation(){
 
-            initContactCreation();
-            fillContactForm(new ContactData()
+            app.getContactHelper().initContactCreation();
+            app.getContactHelper().fillContactForm(new ContactData()
                     .setFirstname("Oleg")
                     .setLastname("Olegovich")
                     .setNickname("Oleg55")
@@ -16,7 +16,7 @@ public class ContactCreationTests extends TestBase {
                     .setCompany("IBM"));
 
 
-            CreateContact();
+            app.getContactHelper().CreateContact();
 
 
 

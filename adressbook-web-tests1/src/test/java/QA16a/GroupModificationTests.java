@@ -1,5 +1,7 @@
 package QA16a;
 
+import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class GroupModificationTests extends TestBase {
@@ -7,15 +9,21 @@ public class GroupModificationTests extends TestBase {
 
     @Test
     public void testGroupModification() {
-        goToGroupsPage();
-        selectGroup();
-        initGroupModification();
-        fillGroupsForm(new GroupData()
+        app.getGroupHelper().goToGroupsPage();
+        if (!app.areEltsPresent(By.name("selected[]"))) {
+            app.createGroup();
+        }
+        int before = app.getGroupCount();
+        app.getGroupHelper().selectGroup();
+        app.getGroupHelper().initGroupModification();
+        app.getGroupHelper().fillGroupsForm(new GroupData()
         .setName("qwe")
         .setHeader("asd")
         .setFooter("zxc"));
-        submitGroupModification();
-        returnToTheGroupsPage();
+        app.getGroupHelper().submitGroupModification();
+        app.getGroupHelper().returnToTheGroupsPage();
+        int after= app.getGroupCount();
+        Assert.assertEquals(after,before-1);
 
     }
 
