@@ -1,5 +1,6 @@
-package QA16a;
+package QA16a.tests;
 
+import QA16a.model.ContactData;
 import org.testng.annotations.Test;
 
 public class ContactCreationTests extends TestBase {

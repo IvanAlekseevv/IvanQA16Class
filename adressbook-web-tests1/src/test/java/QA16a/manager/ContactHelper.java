@@ -1,9 +1,10 @@
-package QA16a;
+package QA16a.manager;
 
+import QA16a.model.ContactData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class ContactHelper extends HelperBase{
+public class ContactHelper extends HelperBase {
 
 
     public ContactHelper(WebDriver wd) {

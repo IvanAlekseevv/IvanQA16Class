@@ -1,5 +1,6 @@
-package QA16a;
+package QA16a.tests;
 
+import QA16a.model.GroupData;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -23,7 +24,7 @@ public class GroupModificationTests extends TestBase {
         app.getGroupHelper().submitGroupModification();
         app.getGroupHelper().returnToTheGroupsPage();
         int after= app.getGroupCount();
-        Assert.assertEquals(after,before-1);
+        Assert.assertEquals(after,before);
 
     }
 

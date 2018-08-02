@@ -1,4 +1,4 @@
-package QA16a;
+package QA16a.tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

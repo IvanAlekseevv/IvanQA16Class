@@ -1,4 +1,4 @@
-package QA16a;
+package QA16a.tests;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;

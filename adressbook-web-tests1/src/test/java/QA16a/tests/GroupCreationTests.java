@@ -1,5 +1,6 @@
-package QA16a;
+package QA16a.tests;
 
+import QA16a.model.GroupData;
 import org.testng.annotations.*;
 
 public class GroupCreationTests extends TestBase {

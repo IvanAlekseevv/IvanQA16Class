@@ -1,4 +1,4 @@
-package QA16a;
+package QA16a.model;
 
 public class ContactData {
     private  String firstname;
