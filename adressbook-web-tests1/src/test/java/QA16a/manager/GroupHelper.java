@@ -45,6 +45,14 @@ public class GroupHelper extends HelperBase {
         click(locator);
         wd.findElement(locator).clear();
         wd.findElement(locator).sendKeys(group.getName());
+
+        click(locator);
+        wd.findElement(locator).clear();
+        wd.findElement(locator).sendKeys(group.getHeader());
+
+        click(locator);
+        wd.findElement(locator).clear();
+        wd.findElement(locator).sendKeys(group.getFooter());
     }
 
     public void groupDeletion() {

@@ -65,4 +65,11 @@ public class ContactHelper extends HelperBase {
         wd.switchTo().alert().dismiss();
     }
 
+    public void editContactCreation() {
+        wd.findElement(By.xpath("//*[@title='Edit']")).click();
+    }
+
+    public void submitContactModification() {
+        wd.findElement(By.name("update")).click();
+    }
 }

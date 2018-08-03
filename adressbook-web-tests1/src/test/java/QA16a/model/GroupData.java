@@ -25,8 +25,7 @@ public class GroupData {
         return name;
     }
 
-    public String getHeader() {
-        return header;
+    public String getHeader() { return header;
     }
 
     public String getFooter() {

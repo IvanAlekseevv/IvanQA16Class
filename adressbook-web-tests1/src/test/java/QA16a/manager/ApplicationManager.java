@@ -1,5 +1,6 @@
 package QA16a.manager;
 
+import QA16a.model.ContactData;
 import QA16a.model.GroupData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -74,7 +75,17 @@ public class ApplicationManager {
     }
 
 
+    public void createContact() {
+        getContactHelper().editContactCreation();
+        getContactHelper().fillContactForm(new ContactData()
+                .setFirstname("Olga")
+                .setLastname("Ivanovna")
+                .setNickname("Olya55")
+                .setAddress("Gagarin,345")
+                .setCompany("GBL"));
+        getContactHelper().submitContactModification();
     }
+}
 
 
 

@@ -1,6 +1,8 @@
 package QA16a.tests;
 
 import QA16a.model.ContactData;
+import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class ContactCreationTests extends TestBase {
@@ -15,9 +17,9 @@ public class ContactCreationTests extends TestBase {
                     .setNickname("Oleg55")
                     .setAddress("Jabotinsky,16")
                     .setCompany("IBM"));
-
-
             app.getContactHelper().CreateContact();
+
+
 
 
 
