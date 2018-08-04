@@ -7,13 +7,13 @@ import org.testng.annotations.Test;
 public class GroupDeletionTests extends TestBase {
 
     @Test
-    public void testGroupDeletion() {
+    public void deletionFirstGroupTest() {
         app.getGroupHelper().goToGroupsPage();
         if (!app.isElementPresent(By.name("selected[]"))) {
             app.createGroup();
         }
         int before = app.getGroupCount();
-        app.getGroupHelper().selectGroup();
+        app.getGroupHelper().selectGroup(); //first group
         app.getGroupHelper().groupDeletion();
         app.getGroupHelper().returnToTheGroupsPage();
         int after= app.getGroupCount();
@@ -22,13 +22,13 @@ public class GroupDeletionTests extends TestBase {
     }
 
     @Test
-    public void testGroupDeletion1() throws InterruptedException {
+    public void deletionLastGroupTest() throws InterruptedException {
         app.getGroupHelper().goToGroupsPage();
         if (!app.areEltsPresent(By.name("selected[]"))) {
             app.createGroup();
         }
         int before = app.getGroupCount();
-        app.getGroupHelper().selectGroupByindex(before-1);
+        app.getGroupHelper().selectGroupByindex(before-1); //last group
         Thread.sleep(3000);
         app.getGroupHelper().groupDeletion();
         app.getGroupHelper().returnToTheGroupsPage();

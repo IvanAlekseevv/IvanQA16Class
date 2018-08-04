@@ -56,12 +56,9 @@ public class ContactHelper extends HelperBase {
         wd.findElement(By.name("selected[]")).click();
     }
 
-    public void confirmAlert() {
-        wd.switchTo().alert().accept();
+    public void confirmAlert() { wd.switchTo().alert().accept(); }
 
-    }
-
-    private void dissmisAlert() {
+    private void dismissAlert() {
         wd.switchTo().alert().dismiss();
     }
 
@@ -71,5 +68,13 @@ public class ContactHelper extends HelperBase {
 
     public void submitContactModification() {
         wd.findElement(By.name("update")).click();
+    }
+
+    public void selectContactByindex(int index) {
+        wd.findElements(By.name("selected[]")).get(index).click();
+    }
+
+    public void goToHomePage() {
+        wd.findElement(By.linkText("home")).click();
     }
 }
