@@ -76,14 +76,14 @@ public class ApplicationManager {
 
 
     public void createContact() {
-        getContactHelper().editContactCreation();
+        getContactHelper().initContactCreation();
         getContactHelper().fillContactForm(new ContactData()
-                .setFirstname("Olga")
-                .setLastname("Ivanovna")
-                .setNickname("Olya55")
-                .setAddress("Gagarin,345")
-                .setCompany("GBL"));
-        getContactHelper().submitContactModification();
+                .setFirstname("Oleg")
+                .setLastname("Olegovich")
+                .setNickname("Oleg55")
+                .setAddress("Jabotinsky,16")
+                .setCompany("IBM"));
+        getContactHelper().CreateContact();
     }
 }
 

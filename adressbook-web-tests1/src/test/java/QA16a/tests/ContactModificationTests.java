@@ -9,6 +9,9 @@ public class ContactModificationTests extends TestBase {
 
     @Test
     public void testModificationContact() {
+
+        app.getContactHelper().goToHomePage();
+
         if (!app.areEltsPresent(By.name("selected[]"))) {
             app.createContact();
         }
@@ -22,15 +25,21 @@ public class ContactModificationTests extends TestBase {
                 .setCompany("GBL"));
         app.getContactHelper().submitContactModification();
         int after = app.getContactHelper().getContactCount();
-        Assert.assertEquals(after,before );
+        Assert.assertEquals(after, before);
 
 
     }
 
+
     @Test
     public void testModificationContact1() {
-        app.getContactHelper().editContactCreation();
-        app.getContactHelper().deleteContact();
+        app.getContactHelper().goToHomePage();
+        if (!app.areEltsPresent(By.name("selected[]"))) {
+            app.createContact();
 
+            app.getContactHelper().editContactCreation();
+            app.getContactHelper().deleteContact();
+
+        }
     }
 }
