@@ -9,7 +9,7 @@ public class GroupDeletionTests extends TestBase {
     @Test
     public void deletionFirstGroupTest() {
         app.getGroupHelper().goToGroupsPage();
-        if (!app.isElementPresent(By.name("selected[]"))) {
+        if (!app.isGroupPresent(By.name("selected[]"))) {
             app.createGroup();
         }
         int before = app.getGroupCount();
@@ -24,7 +24,7 @@ public class GroupDeletionTests extends TestBase {
     @Test
     public void deletionLastGroupTest() throws InterruptedException {
         app.getGroupHelper().goToGroupsPage();
-        if (!app.areEltsPresent(By.name("selected[]"))) {
+        if (!app.isGroupPresent(By.name("selected[]"))) {
             app.createGroup();
         }
         int before = app.getGroupCount();

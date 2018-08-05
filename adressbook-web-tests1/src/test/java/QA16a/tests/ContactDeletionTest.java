@@ -6,15 +6,15 @@ import org.testng.annotations.Test;
 
 public class ContactDeletionTest extends TestBase {
     @Test
-    public void contactDeletionTest() {
+    public void deletionFirstContact () {
         app.getContactHelper().goToHomePage();
 
-        if (!app.areEltsPresent(By.name("selected[]"))) {
+        if (!app.isContactPresent(By.name("selected[]"))) {
             app.createContact();
         }
 
             int before = app.getContactHelper().getContactCount();
-            app.getContactHelper().selectContact();
+            app.getContactHelper().selectContact(); //first contact
             app.getContactHelper().deleteContact();
             app.getContactHelper().confirmAlert();
             int after = app.getContactHelper().getContactCount();
@@ -28,7 +28,7 @@ public class ContactDeletionTest extends TestBase {
     public void deletionLastContact() {
         app.getContactHelper().goToHomePage();
 
-        if (!app.areEltsPresent(By.name("selected[]"))) {
+        if (!app.isContactPresent(By.name("selected[]"))) {
             app.createContact();
         }
 

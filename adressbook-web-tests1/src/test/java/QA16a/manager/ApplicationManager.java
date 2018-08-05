@@ -85,6 +85,14 @@ public class ApplicationManager {
                 .setCompany("IBM"));
         getContactHelper().CreateContact();
     }
+
+    public boolean isContactPresent(By locator) {
+        return wd.findElements(locator).size()>0;
+    }
+
+    public boolean isGroupPresent(By locator) {
+        return wd.findElements(locator).size()>0;
+    }
 }
 
 

@@ -8,11 +8,11 @@ import org.testng.annotations.Test;
 public class ContactModificationTests extends TestBase {
 
     @Test
-    public void testModificationContact() {
+    public void modificationContact() {
 
         app.getContactHelper().goToHomePage();
 
-        if (!app.areEltsPresent(By.name("selected[]"))) {
+        if (!app.isContactPresent(By.name("selected[]"))) {
             app.createContact();
         }
         int before = app.getContactHelper().getContactCount();
@@ -32,9 +32,9 @@ public class ContactModificationTests extends TestBase {
 
 
     @Test
-    public void testModificationContact1() {
+    public void ModificationAndDeleteContact() {
         app.getContactHelper().goToHomePage();
-        if (!app.areEltsPresent(By.name("selected[]"))) {
+        if (!app.isContactPresent(By.name("selected[]"))) {
             app.createContact();
 
             app.getContactHelper().editContactCreation();

@@ -11,7 +11,7 @@ public class GroupModificationTests extends TestBase {
     @Test
     public void testGroupModification() {
         app.getGroupHelper().goToGroupsPage();
-        if (!app.areEltsPresent(By.name("selected[]"))) {
+        if (!app.isGroupPresent(By.name("selected[]"))) {
             app.createGroup();
         }
         int before = app.getGroupCount();
