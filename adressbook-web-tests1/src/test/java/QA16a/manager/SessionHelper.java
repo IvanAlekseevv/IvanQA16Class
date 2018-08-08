@@ -2,6 +2,7 @@ package QA16a.manager;
 
 import QA16a.manager.HelperBase;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
 public class SessionHelper extends HelperBase {
@@ -24,4 +25,15 @@ public class SessionHelper extends HelperBase {
     public void openSite(String url) {
         wd.navigate().to(url);
     }
-}
+
+    public void logout() {
+        wd.findElement(By.xpath("//a[contains(text(),'Logout')]")).click();
+    }
+
+    public boolean isLoggedIn() {
+        return isElementPresent(By.xpath("//a[contains(text(),'Logout')]"));
+    }
+
+
+    }
+

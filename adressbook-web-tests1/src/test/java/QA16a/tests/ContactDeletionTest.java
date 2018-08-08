@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 public class ContactDeletionTest extends TestBase {
     @Test
     public void deletionFirstContact () {
-        app.getContactHelper().goToHomePage();
+        app.getContactHelper().isOnContactPage();
 
         if (!app.isContactPresent(By.name("selected[]"))) {
             app.createContact();
@@ -26,7 +26,7 @@ public class ContactDeletionTest extends TestBase {
 
     @Test
     public void deletionLastContact() {
-        app.getContactHelper().goToHomePage();
+        app.getContactHelper().isOnContactPage();
 
         if (!app.isContactPresent(By.name("selected[]"))) {
             app.createContact();

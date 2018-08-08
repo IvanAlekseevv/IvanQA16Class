@@ -15,16 +15,16 @@ public class ApplicationManager {
     SessionHelper sessionHelper;
     GroupHelper groupHelper;
     ContactHelper contactHelper;
-     public WebDriver wd;
+    public WebDriver wd;
 
     public void start() {
         wd = new ChromeDriver();
         wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        sessionHelper=new SessionHelper(wd);
+        sessionHelper = new SessionHelper(wd);
         sessionHelper.openSite("http://localhost/addressbook/addressbook");
         sessionHelper.login("admin", "secret");
-        groupHelper=new GroupHelper(wd);
-        contactHelper=new ContactHelper(wd);
+        groupHelper = new GroupHelper(wd);
+        contactHelper = new ContactHelper(wd);
     }
 
     public ContactHelper getContactHelper() {
@@ -36,21 +36,12 @@ public class ApplicationManager {
     }
 
 
-
-    public boolean areEltsPresent(By locator){
-        return wd.findElements(locator).size()>0;
-   }
-
-    public boolean isElementPresent(By locator) {
-        try {
-            wd.findElement(locator);
-            return true;
-        } catch (NoSuchElementException e) {
-            return false;
-        }
+    public boolean areEltsPresent(By locator) {
+        return wd.findElements(locator).size() > 0;
     }
 
-    public void createGroup(){
+
+    public void createGroup() {
         groupHelper.goToGroupsPage();
         groupHelper.initGroupCreation();
         groupHelper.fillGroupsForm(new GroupData()
@@ -62,9 +53,6 @@ public class ApplicationManager {
     }
 
 
-    public int getGroupCount() {
-        return wd.findElements(By.name("selected[]")).size();
-    }
 
     public GroupHelper getGroupHelper() {
         return groupHelper;
@@ -87,12 +75,21 @@ public class ApplicationManager {
     }
 
     public boolean isContactPresent(By locator) {
-        return wd.findElements(locator).size()>0;
+        return wd.findElements(locator).size() > 0;
     }
 
-    public boolean isGroupPresent(By locator) {
-        return wd.findElements(locator).size()>0;
+
+
+    public boolean isElementPresent(By locator) {
+        try {
+            wd.findElement(locator);
+            return true;
+        } catch (NoSuchElementException e) {
+            return false;
+        }
     }
+
+
 }
 
 

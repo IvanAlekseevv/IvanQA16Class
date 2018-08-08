@@ -11,10 +11,10 @@ public class GroupModificationTests extends TestBase {
     @Test
     public void testGroupModification() {
         app.getGroupHelper().goToGroupsPage();
-        if (!app.isGroupPresent(By.name("selected[]"))) {
-            app.createGroup();
+        if(!app.getGroupHelper().isGroupPresent()){
+            app.getGroupHelper().createGroup();
         }
-        int before = app.getGroupCount();
+        int before = app.getGroupHelper().getGroupCount();
         app.getGroupHelper().selectGroup();
         app.getGroupHelper().initGroupModification();
         app.getGroupHelper().fillGroupsForm(new GroupData()
@@ -23,7 +23,8 @@ public class GroupModificationTests extends TestBase {
         .setFooter("zxc"));
         app.getGroupHelper().submitGroupModification();
         app.getGroupHelper().returnToTheGroupsPage();
-        int after= app.getGroupCount();
+        int after= app.getGroupHelper().getGroupCount();
+
         Assert.assertEquals(after,before);
 
     }

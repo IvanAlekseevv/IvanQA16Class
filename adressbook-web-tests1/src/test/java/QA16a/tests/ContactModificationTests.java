@@ -10,7 +10,7 @@ public class ContactModificationTests extends TestBase {
     @Test
     public void modificationContact() {
 
-        app.getContactHelper().goToHomePage();
+        app.getContactHelper().isOnContactPage();
 
         if (!app.isContactPresent(By.name("selected[]"))) {
             app.createContact();

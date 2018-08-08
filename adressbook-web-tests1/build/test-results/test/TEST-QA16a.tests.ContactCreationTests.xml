@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="QA16a.tests.ContactCreationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-08-08T20:48:22" hostname="DESKTOP-82IRLRT" time="4.034">
+  <properties/>
+  <testcase name="testContactCreation" classname="QA16a.tests.ContactCreationTests" time="4.034"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

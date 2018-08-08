@@ -17,25 +17,11 @@ public class ContactHelper extends HelperBase {
     }
 
     public void fillContactForm(ContactData contactData) {
-        wd.findElement(By.name("firstname")).click();
-        wd.findElement(By.name("firstname")).clear();
-        wd.findElement(By.name("firstname")).sendKeys(contactData.getFirstname());
-
-        wd.findElement(By.name("lastname")).click();
-        wd.findElement(By.name("lastname")).clear();
-        wd.findElement(By.name("lastname")).sendKeys(contactData.getLastname());
-
-        wd.findElement(By.name("address")).click();
-        wd.findElement(By.name("address")).clear();
-        wd.findElement(By.name("address")).sendKeys(contactData.getAddress());
-
-        wd.findElement(By.name("nickname")).click();
-        wd.findElement(By.name("nickname")).clear();
-        wd.findElement(By.name("nickname")).sendKeys(contactData.getNickname());
-
-        wd.findElement(By.name("company")).click();
-        wd.findElement(By.name("company")).clear();
-        wd.findElement(By.name("company")).sendKeys(contactData.getCompany());
+        type(By.name("firstname"),contactData.getFirstname());
+        type(By.name("lastname"),contactData.getLastname());
+        type(By.name("address"),contactData.getAddress());
+        type(By.name("nickname"),contactData.getNickname());
+        type(By.name("company"),contactData.getCompany());
 
 
     }
@@ -76,5 +62,11 @@ public class ContactHelper extends HelperBase {
 
     public void goToHomePage() {
         wd.findElement(By.linkText("home")).click();
+    }
+
+    public void isOnContactPage() {
+        if(!isElementPresent(By.id("maintable"))){
+        click(By.linkText("home"));
+        }
     }
 }
