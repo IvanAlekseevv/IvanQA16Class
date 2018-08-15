@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="QA16a.tests.GroupModificationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-08-08T20:49:10" hostname="DESKTOP-82IRLRT" time="1.398">
+<testsuite name="QA16a.tests.GroupModificationTests" tests="1" skipped="1" failures="0" errors="0" timestamp="2018-08-15T20:16:12" hostname="DESKTOP-82IRLRT" time="0.0">
   <properties/>
-  <testcase name="testGroupModification" classname="QA16a.tests.GroupModificationTests" time="1.398"/>
+  <testcase name="testGroupModification" classname="QA16a.tests.GroupModificationTests" time="0.0">
+    <skipped/>
+  </testcase>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

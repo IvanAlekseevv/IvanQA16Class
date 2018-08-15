@@ -42,7 +42,10 @@ public class ContactHelper extends HelperBase {
         wd.findElement(By.name("selected[]")).click();
     }
 
-    public void confirmAlert() { wd.switchTo().alert().accept(); }
+    public void confirmAlert() throws InterruptedException {
+        wd.switchTo().alert().accept();
+    Thread.sleep(2000);
+    }
 
     private void dismissAlert() {
         wd.switchTo().alert().dismiss();

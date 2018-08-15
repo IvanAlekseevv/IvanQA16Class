@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="QA16a.tests.ContactDeletionTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-08-08T20:48:31" hostname="DESKTOP-82IRLRT" time="22.25">
+<testsuite name="QA16a.tests.ContactDeletionTest" tests="2" skipped="2" failures="0" errors="0" timestamp="2018-08-15T20:16:12" hostname="DESKTOP-82IRLRT" time="0.0">
   <properties/>
-  <testcase name="deletionFirstContact" classname="QA16a.tests.ContactDeletionTest" time="5.992"/>
-  <testcase name="deletionLastContact" classname="QA16a.tests.ContactDeletionTest" time="16.258"/>
+  <testcase name="deletionFirstContact" classname="QA16a.tests.ContactDeletionTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="deletionLastContact" classname="QA16a.tests.ContactDeletionTest" time="0.0">
+    <skipped/>
+  </testcase>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

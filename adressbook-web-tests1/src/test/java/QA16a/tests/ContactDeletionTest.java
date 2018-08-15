@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class ContactDeletionTest extends TestBase {
     @Test
-    public void deletionFirstContact () {
+    public void deletionFirstContact () throws InterruptedException {
         app.getContactHelper().isOnContactPage();
 
         if (!app.isContactPresent(By.name("selected[]"))) {
@@ -25,7 +25,7 @@ public class ContactDeletionTest extends TestBase {
 
 
     @Test
-    public void deletionLastContact() {
+    public void deletionLastContact() throws InterruptedException {
         app.getContactHelper().isOnContactPage();
 
         if (!app.isContactPresent(By.name("selected[]"))) {
