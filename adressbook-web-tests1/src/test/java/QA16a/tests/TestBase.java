@@ -10,7 +10,7 @@ public class TestBase {
 
     protected static ApplicationManager app
             = new ApplicationManager(System
-            .getProperty("browser", BrowserType.EDGE));
+            .getProperty("browser", BrowserType.FIREFOX));
 
 
     @BeforeSuite

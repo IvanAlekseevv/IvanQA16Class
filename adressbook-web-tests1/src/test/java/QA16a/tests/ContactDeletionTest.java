@@ -1,8 +1,11 @@
 package QA16a.tests;
 
+import QA16a.model.GroupData;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.List;
 
 public class ContactDeletionTest extends TestBase {
     @Test
@@ -13,13 +16,16 @@ public class ContactDeletionTest extends TestBase {
             app.createContact();
         }
 
-            int before = app.getContactHelper().getContactCount();
+
+
+          int before = app.getContactHelper().getContactCount();
+
             app.getContactHelper().selectContact(); //first contact
             app.getContactHelper().deleteContact();
             app.getContactHelper().confirmAlert();
             int after = app.getContactHelper().getContactCount();
 
-            Assert.assertEquals(after, before - 1);
+            Assert.assertEquals(after,before -1);
 
         }
 

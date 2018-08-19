@@ -58,7 +58,7 @@ public class ApplicationManager {
     }
 
 
-    public void createGroup() {
+    public void createGroup() throws InterruptedException {
         groupHelper.goToGroupsPage();
         groupHelper.initGroupCreation();
         groupHelper.fillGroupsForm(new GroupData()

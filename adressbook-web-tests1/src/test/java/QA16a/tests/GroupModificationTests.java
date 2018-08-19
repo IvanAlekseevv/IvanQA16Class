@@ -5,27 +5,44 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.HashSet;
+import java.util.List;
+
 public class GroupModificationTests extends TestBase {
 
 
     @Test
-    public void testGroupModification() {
+    public void testGroupModification() throws InterruptedException {
         app.getGroupHelper().goToGroupsPage();
         if(!app.getGroupHelper().isGroupPresent()){
             app.getGroupHelper().createGroup();
         }
-        int before = app.getGroupHelper().getGroupCount();
+        List<GroupData> groupListBefore
+                = app.getGroupHelper().getGroupList();
+
+        //int before = app.getGroupHelper().getGroupCount();
         app.getGroupHelper().selectGroup();
         app.getGroupHelper().initGroupModification();
-        app.getGroupHelper().fillGroupsForm(new GroupData()
-        .setName("qwe")
-        .setHeader("asd")
-        .setFooter("zxc"));
+        GroupData group =new GroupData()
+                .setId(groupListBefore.get(0).getId())
+                .setName("qwe")
+                .setHeader("asd")
+                .setFooter("zxc");
+        app.getGroupHelper().fillGroupsForm(group);
         app.getGroupHelper().submitGroupModification();
         app.getGroupHelper().returnToTheGroupsPage();
-        int after= app.getGroupHelper().getGroupCount();
+       // int after= app.getGroupHelper().getGroupCount();
+        List<GroupData> groupListAfter
+                = app.getGroupHelper().getGroupList();
 
-        Assert.assertEquals(after,before);
+        groupListBefore.remove(0);
+        groupListBefore.add(group);
+
+       Assert.assertEquals(groupListAfter.size(),groupListBefore.size());
+
+       Assert.assertEquals(new HashSet<Object>(groupListAfter),
+               new HashSet<Object>(groupListBefore));
+
 
     }
 
