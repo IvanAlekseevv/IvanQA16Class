@@ -1,0 +1,2 @@
+20:29:44.903 [main] INFO  QA16a.tests.TestBase - Start testtestGroupCreation
+20:30:02.718 [main] INFO  QA16a.tests.TestBase - Stop testtestGroupCreation

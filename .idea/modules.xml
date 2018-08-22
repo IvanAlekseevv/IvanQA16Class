@@ -8,6 +8,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/adressbook-web-tests1.iml" filepath="$PROJECT_DIR$/.idea/modules/adressbook-web-tests1.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/adressbook-web-tests1_main.iml" filepath="$PROJECT_DIR$/.idea/modules/adressbook-web-tests1_main.iml" group="adressbook-web-tests1" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/adressbook-web-tests1_test.iml" filepath="$PROJECT_DIR$/.idea/modules/adressbook-web-tests1_test.iml" group="adressbook-web-tests1" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/autoaction.iml" filepath="$PROJECT_DIR$/.idea/modules/autoaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/autoaction_main.iml" filepath="$PROJECT_DIR$/.idea/modules/autoaction_main.iml" group="autoaction" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/autoaction_test.iml" filepath="$PROJECT_DIR$/.idea/modules/autoaction_test.iml" group="autoaction" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/firstProject.iml" filepath="$PROJECT_DIR$/.idea/modules/firstProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/firstProject_main.iml" filepath="$PROJECT_DIR$/.idea/modules/firstProject_main.iml" group="firstProject" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/firstProject_test.iml" filepath="$PROJECT_DIR$/.idea/modules/firstProject_test.iml" group="firstProject" />

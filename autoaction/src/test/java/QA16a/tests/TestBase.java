@@ -1,7 +1,6 @@
 package QA16a.tests;
 
 import QA16a.manager.ApplicationManager;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.BrowserType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

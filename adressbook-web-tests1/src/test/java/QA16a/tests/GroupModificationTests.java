@@ -40,8 +40,8 @@ public class GroupModificationTests extends TestBase {
 
        Assert.assertEquals(groupListAfter.size(),groupListBefore.size());
 
-       Assert.assertEquals(new HashSet<Object>(groupListAfter),
-               new HashSet<Object>(groupListBefore));
+       Assert.assertEquals(new HashSet<Object>(groupListBefore),
+               new HashSet<Object>(groupListAfter));
 
 
     }
