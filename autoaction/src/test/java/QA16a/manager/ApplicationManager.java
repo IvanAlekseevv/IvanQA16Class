@@ -38,7 +38,8 @@ public class ApplicationManager {
         wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         sessionHelper = new SessionHelper(wd);
         sessionHelper.openSite("http://autoauction.co.il/%d7%a6%d7%95%d7%a8-%d7%a7%d7%a9%d7%a8/");
-        groupHelper = new GroupHelper(wd);
+        //sessionHelper.login("admin", "secret");
+        //groupHelper = new GroupHelper(wd);
         contactHelper = new ContactHelper(wd);
     }
 
