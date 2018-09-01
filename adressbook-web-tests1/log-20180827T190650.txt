@@ -1,0 +1,7 @@
+19:06:55.573 [main] INFO  QA16a.tests.TestBase - By.name: userfound
+19:06:55.701 [main] INFO  QA16a.tests.TestBase - By.name: userfound
+19:06:55.753 [main] INFO  QA16a.tests.TestBase - By.name: userfound
+19:06:55.843 [main] INFO  QA16a.tests.TestBase - By.name: passfound
+19:06:55.927 [main] INFO  QA16a.tests.TestBase - By.name: passfound
+19:06:55.967 [main] INFO  QA16a.tests.TestBase - By.name: passfound
+19:06:56.062 [main] INFO  QA16a.tests.TestBase - By.xpath: //*[@value='Login']found

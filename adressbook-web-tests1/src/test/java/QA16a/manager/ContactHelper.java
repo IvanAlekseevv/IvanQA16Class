@@ -3,6 +3,11 @@ package QA16a.manager;
 import QA16a.model.ContactData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ContactHelper extends HelperBase {
 
@@ -17,13 +22,14 @@ public class ContactHelper extends HelperBase {
     }
 
     public void fillContactForm(ContactData contactData) {
-        type(By.name("firstname"),contactData.getFirstname());
-        type(By.name("lastname"),contactData.getLastname());
-        type(By.name("address"),contactData.getAddress());
-        type(By.name("nickname"),contactData.getNickname());
-        type(By.name("company"),contactData.getCompany());
+        type(By.name("firstname"), contactData.getFirstname());
+        type(By.name("lastname"), contactData.getLastname());
+        type(By.name("address"), contactData.getAddress());
+        type(By.name("nickname"), contactData.getNickname());
+        type(By.name("company"), contactData.getCompany());
+        attach(By.name("photo"), contactData.getPhoto());
 
-
+      new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup()); //выпадающие списки это select
     }
 
     public void initContactCreation() {
@@ -44,7 +50,7 @@ public class ContactHelper extends HelperBase {
 
     public void confirmAlert() throws InterruptedException {
         wd.switchTo().alert().accept();
-    Thread.sleep(2000);
+        Thread.sleep(2000);
     }
 
     private void dismissAlert() {
@@ -68,8 +74,28 @@ public class ContactHelper extends HelperBase {
     }
 
     public void isOnContactPage() {
-        if(!isElementPresent(By.id("maintable"))){
-        click(By.linkText("home"));
+        if (!isElementPresent(By.id("maintable"))) {
+            click(By.linkText("home"));
         }
     }
+
+    public List<ContactData> getContactsList() {
+        List<ContactData> contacts = new ArrayList<>();
+
+        List<WebElement> rows = wd.findElements(By.name("entry"));
+        for (WebElement row : rows) {
+            List<WebElement> cells = row.findElements(By.tagName("td"));
+            int id = Integer.parseInt(cells.get(0).findElement(By.name("selected[]")).getAttribute("value"));
+            String lastName = cells.get(1).getText();
+            String firstName = cells.get(2).getText();
+            contacts.add(new ContactData()
+                    .setId(id)
+                    .setLastname(lastName)
+                    .setFirstname(firstName));
+
+        }
+        return contacts;
+    }
 }
+
+

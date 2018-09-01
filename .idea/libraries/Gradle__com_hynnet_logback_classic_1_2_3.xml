@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Gradle: com.hynnet:logback-classic:1.2.3">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/autoaction/Could not find com.hynnet:logback-classic:1.2.3.&#13;&#10;Searched in the following locations:&#13;&#10;    https:/repo.maven.apache.org/maven2/com/hynnet/logback-classic/1.2.3/logback-classic-1.2.3.pom&#13;&#10;    https:/repo.maven.apache.org/maven2/com/hynnet/logback-classic/1.2.3/logback-classic-1.2.3.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

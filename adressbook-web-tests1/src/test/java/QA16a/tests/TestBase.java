@@ -12,8 +12,7 @@ import org.testng.annotations.BeforeSuite;
 
 import java.lang.reflect.Method;
 
-public class TestBase {
-    Logger logger = LoggerFactory.getLogger(TestBase.class);
+public class TestBase extends MyListener{
 
 
     protected static ApplicationManager app

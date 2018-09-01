@@ -2,6 +2,7 @@ package QA16a.manager;
 
 import QA16a.model.ContactData;
 import QA16a.model.GroupData;
+import QA16a.tests.MyListener;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.BrowserType;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.concurrent.TimeUnit;
 
@@ -18,7 +20,7 @@ public class ApplicationManager {
     SessionHelper sessionHelper;
     GroupHelper groupHelper;
     ContactHelper contactHelper;
-    private WebDriver wd;
+    private EventFiringWebDriver wd;
     private String browser;
 
     public ApplicationManager(String browser) {
@@ -28,14 +30,14 @@ public class ApplicationManager {
 
     public void start() {
         if (browser.equals(BrowserType.CHROME)) {
-            wd = new ChromeDriver();
+            wd = new EventFiringWebDriver(new ChromeDriver());
         }else if (browser.equals(BrowserType.FIREFOX)){
-            wd  = new FirefoxDriver();
+            wd  = new EventFiringWebDriver (new FirefoxDriver());
         }else if (browser.equals(BrowserType.EDGE)){
-            wd  = new EdgeDriver();
-
-
+            wd  = new EventFiringWebDriver (new EdgeDriver());
         }
+        wd.register(new MyListener());
+
         wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         sessionHelper = new SessionHelper(wd);
         sessionHelper.openSite("http://localhost/addressbook/addressbook");
